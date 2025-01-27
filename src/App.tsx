@@ -1,17 +1,15 @@
 import './global.css'
 import  styles from './App.module.css'
-import todoLogo from './assets/todo-logo.svg'
+
 import clipBoard from './assets/clipboard-logo.svg'
 import { PlusCircle } from "@phosphor-icons/react"
+import { Header } from './Header'
 
 export const App = () => {
 
   return (
     <div>
-      <header className={styles.header}>
-        <img src={todoLogo} alt="Logo To.do" />
-        <h1>to<b>do</b></h1>
-      </header>
+    <Header />
 
       <div className={styles.main}>
         <div className={styles.formBoxes}>
