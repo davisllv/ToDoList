@@ -1,52 +1,6 @@
 .main {
   max-width: 44rem;
-
   margin: 0 auto;
-}
-
-.formBoxes {
-  margin-top: -2rem;
-  height: 3.25rem;
-  line-height: 1.6;
-}
-
-.formBoxes > form {
-  width: 100%;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.formBoxes > form > input {
-  padding: 1rem;
-  width: 90%;
-}
-
-.formBoxes input {
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background: var(--gray-500);
-  color: var(--gray-100);
-  outline: none;
-}
-
-.formBoxes button[type=submit] {
-  width: 15%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  border: none;
-  border-radius: 8px;
-  background: var(--blue-dark);
-
-  color: var(--gray-100);
-  font-size: 0.875rem;
-  font-weight: bold;
-
-  cursor: pointer;
 }
 
 .contentBoxes {
@@ -80,22 +34,3 @@
   color: var(--purple);
 }
 
-.contentFields {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-  line-height: 1.6;
-  font-size: 1rem;
-
-  min-height: 30rem;
-
-  border-radius: 8px;
-  border-top: 1px solid var(--gray-400)
-}
-
-.contentFields > p {
-  margin-top: 1rem;
-  font-weight: bold;
-}

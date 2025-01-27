@@ -1,4 +1,4 @@
-import todoLogo from './assets/todo-logo.svg'
+import todoLogo from '../../../assets/todo-logo.svg'
 import styles from './styles.module.css'
 
 export const Header = () => {

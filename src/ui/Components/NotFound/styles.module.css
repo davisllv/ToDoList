@@ -1,0 +1,19 @@
+.contentNotFound {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+    line-height: 1.6;
+    font-size: 1rem;
+  
+    min-height: 30rem;
+  
+    border-radius: 8px;
+    border-top: 1px solid var(--gray-400)
+  }
+  
+  .contentNotFound > p {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
