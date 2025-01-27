@@ -8,6 +8,10 @@
     border-radius: 8px;
 }
 
+.task + .task {
+    margin-top: 0.75rem;
+}
+
 .task > p {
     flex: 1;
     line-height: 1.4;
@@ -63,6 +67,7 @@
     transform: rotate(45deg);
   }
 
-  .customCheckbox input[type="checkbox"]:checked ~ p {
-    color: red;
+  .checkedText {
+    color: var(--gray-300) !important;
+    text-decoration: line-through;
   }

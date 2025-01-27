@@ -9,7 +9,9 @@ import { uuidv4 } from './data/services/uuid'
 import { Tasks } from './ui/Components/Tasks'
 
 export const App = () => {
-  const [tasks, setTasks] = useState<ITask[]>([] as ITask[])
+  const [tasks, setTasks] = useState<ITask[]>([] as ITask[]);
+  const [tasksCount, setTasksCount] = useState(0);
+  const [completedTasksCount, setCompletedTasksCount] = useState(0);
 
   const handleCreateNewTask = (description: string) => {
     const newTask: ITask = {
@@ -19,6 +21,25 @@ export const App = () => {
     }
 
     setTasks(state => [...state, newTask])
+    setTasksCount(tasks.length + 1)
+  }
+
+  const handleDeleteTask = (taskId: string) => {
+    const updatedTasks = tasks.filter(task => task.id!== taskId)
+    setTasksCount(updatedTasks.length)
+    setTasks(updatedTasks)
+  }
+
+  const handleToggleTask = (taskId: string) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === taskId) {
+        return {...task, completed:!task.completed }
+      }
+      return task
+    })
+    const count = updatedTasks.reduce((acc, task) => task.completed ? acc + 1 : acc, 0)
+    setCompletedTasksCount(count);
+    setTasks(updatedTasks)
   }
 
   return (
@@ -30,8 +51,8 @@ export const App = () => {
 
         <div className={styles.contentBoxes}>
           <div className={styles.contentTexts}>
-            <span>Tarefas Criadas <strong>0</strong></span>
-            <span>Concluídas <strong>0</strong></span>
+            <span>Tarefas Criadas <strong>{tasksCount}</strong></span>
+            <span>Concluídas <strong>{completedTasksCount}</strong></span>
           </div>
           <div className={styles.contentTasks}>
           {tasks.length > 0 ?
@@ -39,7 +60,10 @@ export const App = () => {
               return (
                 <Tasks 
                   key={task.id} 
-                  task={task}/>
+                  task={task}
+                  handleDeleteTask={handleDeleteTask}
+                  handleToggleTask={handleToggleTask}
+                  />
               )
             })
              :
