@@ -1,6 +1,6 @@
 .task {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
     padding: 1rem;
     justify-content: space-between;
@@ -12,26 +12,38 @@
     margin-top: 0.75rem;
 }
 
-.task > p {
+.task p {
     flex: 1;
     line-height: 1.4;
     color: var(--gray-100);
+    margin: 0;
 }
 
-.task > button {
+.task button {
     background: transparent;
     border: 0;
     color: var(--gray-300);
     cursor: pointer;
     line-height: 0;
 
-    border-radius: 2px;
-    
+    border-radius: 6px;
+
+    padding: 0.375rem;
+
+    transition: background 0.5s;
+}
+
+.task button:hover {
+    color: var(--danger);
+    background: var(--gray-400);
 }
 
 .customCheckbox {
+    padding: 0.375rem;
     position: relative;
     display: inline-block;
+
+
   }
 
   .customCheckbox input[type="checkbox"] {

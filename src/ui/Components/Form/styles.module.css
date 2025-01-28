@@ -41,4 +41,20 @@
     font-weight: bold;
   
     cursor: pointer;
+
+    transition: background 0.3s;
+  }
+
+  .formBoxes button[type=submit]:hover {
+    background: var(--blue);
+  }
+
+  @media (max-width: 768px) {
+    .task button {
+      padding: 0.25rem; /* Reduz o padding em telas menores */
+    }
+  
+    .task button:hover {
+      transform: scale(1); /* Remove o efeito de escala em telas menores */
+    }
   }

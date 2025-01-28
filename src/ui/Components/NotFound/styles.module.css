@@ -8,12 +8,27 @@
     font-size: 1rem;
   
     min-height: 30rem;
+    padding: 1rem;
+    text-align: center;
   
     border-radius: 8px;
     border-top: 1px solid var(--gray-400)
   }
   
-  .contentNotFound > p {
+  .contentNotFound p {
     margin-top: 1rem;
     font-weight: bold;
+
+    color: var(--gray-300)
+  }
+
+  @media (max-width: 768px) {
+    .contentNotFound {
+      min-height: 20rem; /* Reduz a altura mínima em telas menores */
+      padding: 0.5rem; /* Reduz o padding em telas menores */
+    }
+  
+    .contentNotFound p {
+      font-size: 0.875rem; /* Reduz o tamanho da fonte em telas menores */
+    }
   }

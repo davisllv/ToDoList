@@ -1,42 +1,58 @@
 .main {
-  max-width: 44rem;
-  margin: 0 auto;
+  max-width: 44rem; /* Define a largura máxima do conteúdo principal */
+  margin: 0 auto; /* Centraliza o conteúdo na página */
+  padding: 0 1rem; /* Adiciona um padding lateral para evitar que o conteúdo encoste nas bordas em telas menores */
 }
 
 .contentBoxes {
-  margin-top: 4rem;
+  margin-top: 4rem; /* Espaçamento superior para separar do conteúdo acima */
 }
 
 .contentTexts {
   display: flex;
   margin-bottom: 1.5rem;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha em telas menores */
 }
+
 .contentTexts > span {
   display: flex;
   align-items: center;
   font-weight: bold;
   gap: 0.5rem;
+  margin-bottom: 1rem; /* Adiciona um espaçamento inferior para evitar sobreposição em telas menores */
 }
 
 .contentTexts > span > strong {
   color: var(--gray-100);
   padding: 0.35rem 0.5rem;
   background: var(--gray-400);
-  border-radius: 999px;
+  border-radius: 999px; /* Cria um efeito de "pill" para o background */
 }
 
-.contentTexts > span:nth-of-type(1){
-  color: var(--blue);
+.contentTexts > span:nth-of-type(1) {
+  color: var(--blue); /* Cor para o primeiro span */
 }
 
-.contentTexts > span:nth-of-type(2){
-  color: var(--purple);
+.contentTexts > span:nth-of-type(2) {
+  color: var(--purple); /* Cor para o segundo span */
 }
 
-@media (max-width: 768px){
-  /* Rem ele se baseia pelo font-size */
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
   html {
-      font-size: 87.5%;
+    font-size: 87.5%; /* Reduz o tamanho da fonte base para telas menores */
+  }
+
+  .main {
+    padding: 0 0.875rem; /* Reduz o padding lateral para telas menores */
+  }
+
+  .contentTexts {
+    align-items: center; /* Centraliza os itens na coluna */
+  }
+
+  .contentTexts > span {
+    justify-content: center; /* Centraliza o conteúdo dos spans */
   }
 }
