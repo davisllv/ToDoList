@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# 📌 To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um simples e eficiente aplicativo de lista de tarefas desenvolvido com **React**, **TypeScript** e **CSS Modules**.
 
-Currently, two official plugins are available:
+![To-Do List](images/todo_list_react.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+✅ Adicionar uma nova tarefa<br>
+✅ Marcar e desmarcar uma tarefa como concluída<br>
+✅ Remover uma tarefa da listagem<br>
+✅ Exibir progresso de conclusão das tarefas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠 Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- ⚛️ **React** – Biblioteca para construção da UI
+- 📜 **TypeScript** – Tipagem estática para um código mais seguro
+- 🎨 **CSS Modules** – Estilização modular e otimizada
+- 🔗 **Phosphor Icons** – Ícones leves e personalizáveis
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🏗 Conceitos Aplicados
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Este projeto reforça conceitos essenciais do React, como:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- 📌 **Estados** – Gerenciamento eficiente do estado das tarefas
+- 🔄 **Imutabilidade** – Atualização correta dos dados sem mutações
+- 🔑 **Listas e Chaves** – Renderização otimizada de elementos
+- 🏗 **Componentização** – Organização modular e reutilizável
+- 🎯 **Propriedades** – Comunicação eficaz entre componentes
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🎨 Layout da Aplicação
+
+A interface foi projetada para ser intuitiva e minimalista, garantindo uma ótima experiência de usuário. Você pode personalizar o design conforme sua necessidade!
+
+## ⚙️ Como Executar o Projeto
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/todo-list-react.git
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```bash
+   cd todo-list-react
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+4. Inicie o projeto:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+A aplicação estará disponível em `http://localhost:5173/` 🚀
+
+## 📌 Próximos Passos
+
+🚀 Melhorias futuras podem incluir:
+
+- 🔔 Notificações para tarefas pendentes
+- 📅 Integração com calendário
+- 📊 Estatísticas de produtividade
+
+---
+
+💡 **Dica:** Sinta-se à vontade para customizar e expandir este projeto! 🛠️
