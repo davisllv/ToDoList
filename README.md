@@ -61,16 +61,3 @@ A interface foi projetada para ser intuitiva e minimalista, garantindo uma ótim
    yarn dev
    ```
 
-A aplicação estará disponível em `http://localhost:5173/` 🚀
-
-## 📌 Próximos Passos
-
-🚀 Melhorias futuras podem incluir:
-
-- 🔔 Notificações para tarefas pendentes
-- 📅 Integração com calendário
-- 📊 Estatísticas de produtividade
-
----
-
-💡 **Dica:** Sinta-se à vontade para customizar e expandir este projeto! 🛠️
